@@ -1,5 +1,21 @@
 const channelList = [
   {
+    title: "canal 8 mar del plata",
+    description: "",
+    url: "https://mardelplata.telefe.com/vivo",
+    info: "https://mardelplata.mitelefe.com/horarios",
+    logo: "./canal8-mdq.png",
+    costo: "gratis"
+  },
+  {
+    title: "Canal 10 Mar del Plata",
+    description: "",
+    url: "https://zencast.tv/player/canal10/",
+    info: "https://www.canal10mardelplata.tv/DiasyHorarios/",
+    logo: "./canal-10-mdq-2.jpg",
+    costo: "gratis"
+  },
+  {
     title: "Netflix",
     description: "Watch Netflix on your TV.",
     url: "https://www.netflix.com/",
@@ -93,22 +109,6 @@ const channelList = [
     url: "https://play.cine.ar/inicio",
     info: "",
     logo: "./cinear-play.png",
-    costo: "gratis"
-  },
-  {
-    title: "canal 8 mar del plata",
-    description: "",
-    url: "https://mardelplata.telefe.com/vivo",
-    info: "https://mardelplata.mitelefe.com/horarios",
-    logo: "./canal8-mdq.png",
-    costo: "gratis"
-  },
-  {
-    title: "Canal 10 Mar del Plata",
-    description: "",
-    url: "https://zencast.tv/player/canal10/",
-    info: "https://www.canal10mardelplata.tv/DiasyHorarios/",
-    logo: "./canal-10-mdq-2.jpg",
     costo: "gratis"
   },
   {
