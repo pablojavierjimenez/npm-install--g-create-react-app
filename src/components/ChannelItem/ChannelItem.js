@@ -7,11 +7,11 @@ export default class ChannelItem extends Component {
       borderRadius: "4px",
       boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
       backgroundColor: "white",
-      padding: "20px",
+      padding: "20px 20px 10px",
       maxWidth: "200px",
       maxHeight: "300px",
       minHeight: "250px",
-      margin: "16px",
+      margin: "24px 32px 24px 24px",
       display: "inline-block",
     },
     info: {
@@ -37,6 +37,7 @@ export default class ChannelItem extends Component {
     logo: {
       width: "200px",
       height: "200px",
+      borderRadius: "30px"
     },
   };
   render() {
@@ -44,8 +45,10 @@ export default class ChannelItem extends Component {
     console.log(channel.title);
     this.styles.infoButton.visibility = (channel.info !== "") ? "visible" : "hidden";
 
+    const itemClassName = `ChannelItem ${channel.costo}`;
+
     return (
-      <div className="ChannelItem" style={this.styles.ChannelItem}>
+      <div className={itemClassName} style={this.styles.ChannelItem}>
         <div className="ChannelItem__info">
           <h4>{channel.title}</h4>
         </div>

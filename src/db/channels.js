@@ -64,20 +64,20 @@ const channelList = [
     costo: "subscripcion"
   },
   {
-    title: "DirecTV GO",
-    description: "",
-    url: "https://www.directvgo.com/home/watch",
-    info: "",
-    logo: "./directv-go.png",
-    costo: "subscripcion"
-  },
-  {
     title: "YouTube",
     description: "",
     url: "https://www.youtube.com",
     info: "",
     logo: "./youtube-1.png",
     costo: "gratis"
+  },
+  {
+    title: "Twitch",
+    description: "",
+    url: "https://www.twitch.tv/directory/following/live",
+    info: "",
+    logo: "./Twitch.png",
+    costo: "subscripcion"
   },
   {
     title: "Pluto TV",
@@ -176,6 +176,14 @@ const channelList = [
     costo: "gratis o subscripcion"
   },
   {
+    title: "YouTube Music",
+    description: "",
+    url: "https://www.youtube.com",
+    info: "",
+    logo: "./youtube-music.png",
+    costo: "gratis o subscripcion"
+  },
+  {
     title: "Radios Mar del Plata",
     description: "",
     url: "https://radioarg.net/buenos-aires/mar-del-plata",
@@ -208,11 +216,35 @@ const channelList = [
     costo: "gratis"
   },
   {
+    title: "Plex Tv (en ingles)",
+    description: "",
+    url: "https://watch.plex.tv/movies-and-shows",
+    info: "",
+    logo: "./Plex.webp",
+    costo: "gratis"
+  },
+  {
+    title: "Qubit Tv",
+    description: "",
+    url: "https://www.qubit.tv/inicio/",
+    info: "",
+    logo: "./Qubit-tv.png",
+    costo: "subscripcion"
+  },
+  {
+    title: "DirecTV GO",
+    description: "",
+    url: "https://www.directvgo.com/home/watch",
+    info: "",
+    logo: "./directv-go.png",
+    costo: "subscripcion"
+  },
+  {
     title: "insta test",
     description: "",
     url: "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end",
     info: "",
-    logo: "./canal8-mdq-0.png",
+    logo: "./instagram.webp",
     costo: "gratis"
   }
 ];
