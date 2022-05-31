@@ -1,16 +1,14 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import ChannelItem from "./components/ChannelItem/ChannelItem";
 import channelList from "./db/channels";
+import Header from "./components/Header/Header";
+import ItemList from "./components/ItemList";
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Header />
-      {channelList.map((item) => (
-        <ChannelItem channel={item} />
-      ))}
-    </div>
+      <ItemList channels={channelList} />
+    </main>
   );
 }
 
