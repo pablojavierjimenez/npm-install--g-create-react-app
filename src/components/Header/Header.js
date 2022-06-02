@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import MenuFilter from "../MenuFilter/MenuFilter";
-import { Link, NavLink } from "react-router-dom";
+// import MenuFilter from "../MenuFilter/MenuFilter";
+import { NavLink } from "react-router-dom";
 
-const imagesFolder = require.context("../../assets/img/", true);
+// const imagesFolder = require.context("../../assets/img/", true);
 
 const styles = {
   container:{
@@ -57,7 +57,7 @@ export default class Header extends Component {
       <nav className="nav-link" style={styles.nav}>
         <NavLink to="/">Todo</NavLink>
         <NavLink to="/subcription">Subscripcion</NavLink>
-        <NavLink to="/favoritos">⭐</NavLink>
+        <NavLink to="/favoritos">❤️</NavLink>
         <NavLink to="/mixed">Mixto</NavLink>
         <NavLink to="/free">Gratis</NavLink>
       </nav>

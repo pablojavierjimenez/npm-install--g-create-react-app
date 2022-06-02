@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Favorite from "../Favorite/Favorite";
 
 const imagesFolder = require.context("../../assets/img/", true);
 export default class ChannelItem extends Component {
@@ -42,7 +43,7 @@ export default class ChannelItem extends Component {
   };
   render() {
     const { channel } = this.props;
-    console.log(channel.title);
+    // console.log(channel.title);
     this.styles.infoButton.visibility = (channel.info !== "") ? "visible" : "hidden";
 
     const itemClassName = `ChannelItem ${channel.costo}`;
@@ -70,13 +71,13 @@ export default class ChannelItem extends Component {
           >
             noticias
           </a>
-
           {channel.description !== "" && (
             <details>
               <summary>detalles</summary>
               <p>{channel.description}</p>
             </details>
           )}
+          <Favorite channel={channel} />
         </small>
       </div>
     );

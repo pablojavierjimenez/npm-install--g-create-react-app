@@ -5,6 +5,10 @@ const styles = {
   container: {
     minHeight: "calc(100vh - 89px)",
     paddingTop: "89px",
+    alignItems: "flex-start",
+    display: "flex",
+    flexFlow: "wrap",
+    justifyContent: "center",
   },
 };
 class ItemList extends Component {
