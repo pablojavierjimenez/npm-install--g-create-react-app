@@ -5,11 +5,11 @@ import ItemList from "./ItemList";
 class Subscription extends Component {
   state = {};
   render() {
-    const { channelList } = this.props;
+    const channelListFromStorage = JSON.parse(localStorage.getItem("channelList"));
     return (
       <main className="App">
         <Header />
-        <ItemList channels={channelList} filterBy="subscripcion"/>
+        <ItemList channels={channelListFromStorage} filterBy="subscripcion"/>
       </main>
     );
   }

@@ -21,7 +21,7 @@ class ItemList extends Component {
         {filterBy &&
           channels
             .filter((item) => item.tipo === filterBy)
-            .map((item) => <ChannelItem channel={item} />)}
+            .map((item) => <ChannelItem channel={item} key={item.id}/>)}
       </section>
     );
   }

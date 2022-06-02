@@ -13,18 +13,16 @@ import Favorites from "./components/Favorites";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let channelListFromStorage = [];
-if(localStorage.getItem("channelList") && JSON.parse(localStorage.getItem("channelList")).length > 0) {
-  console.log('ya existe');
-  channelListFromStorage = JSON.parse(localStorage.getItem("channelList"));
+
+if (
+  localStorage.getItem("channelList") &&
+  JSON.parse(localStorage.getItem("channelList")).length > 0
+) {
+  console.log("ya existe");
 } else {
-  console.log('no existe se agrega');
+  console.log("no existe se agrega");
   localStorage.setItem("channelList", JSON.stringify(channelList));
 }
-
-
-
-
-
 
 const haveIPreexistingFavorites =
   localStorage.getItem("FavoritesChannels") &&
@@ -34,20 +32,15 @@ const haveIPreexistingFavorites =
 if (!haveIPreexistingFavorites) {
   localStorage.setItem("FavoritesChannels", JSON.stringify([]));
 }
+
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route
-        path="subcription"
-        element={<Subscription channelList={channelListFromStorage} />}
-      />
-      <Route
-        path="mixed"
-        element={<MixedChannel channelList={channelListFromStorage} />}
-      />
-      <Route path="free" element={<FreeChannels channelList={channelListFromStorage} />} />
-      <Route path="favoritos" element={<Favorites channelList={channelListFromStorage}/>} />
+      <Route path="subcription" element={<Subscription />} />
+      <Route path="mixed" element={<MixedChannel />} />
+      <Route path="free" element={<FreeChannels />} />
+      <Route path="favoritos" element={<Favorites />} />
     </Routes>
   </BrowserRouter>
 );
