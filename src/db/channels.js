@@ -366,9 +366,9 @@ const channelList = [
     id: 34,
     title: "Whatsapp",
     description: "",
-    url: "http://web.whatsapp.com",
+    url: "whatsapp://send?text=YoYoYo",
     info: "",
-    logo: "./instagram.webp",
+    logo: "./whatsApp.png",
     costo: "gratis",
     tipo: "gratis",
     isFavorite: false
@@ -379,7 +379,7 @@ const channelList = [
     description: "",
     url: "intent://facebook.com/#Intent;scheme=https;package=com.facebook.android;end",
     info: "",
-    logo: "./instagram.webp",
+    logo: "./facebook.webp",
     costo: "gratis",
     tipo: "gratis",
     isFavorite: false
