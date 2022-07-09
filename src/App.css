@@ -37,7 +37,7 @@ h4 {
 .nav-link a {
   display: block;
     box-sizing: border-box;
-    width: 20vw;
+    width: calc(100vw / 7);
     text-decoration: none;
     padding: 4px;
     background-color: #1f1933;
@@ -56,4 +56,26 @@ h4 {
   background-color: #f7f7f7;
   color: #000000;
   font-weight: 500;
+}
+
+.ChannelItem:hover,
+.ChannelItem:focus {
+  background-color: #1f1933 !important;
+  color: white;
+  transform: scale(1.2);
+  z-index: inherit;
+}
+.ChannelItem:focus {
+  border: none;
+}
+.ChannelItem:hover, .ChannelItem__info {
+  font-size: 1.3rem;
+  line-height: 1rem;
+}
+.ChannelItem__preview  {
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+.ChannelItem:hover, .ChannelItem__preview img {
+  box-shadow: 0 0 3px #ffffff;
 }

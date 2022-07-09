@@ -13,15 +13,30 @@ const styles = {
 };
 class ItemList extends Component {
   state = {};
+  updateParentState(){
+    console.log('cambio lago')
+  };
   render() {
-    const { channels, filterBy } = this.props;
+    const { channels, filterBy, filterByFavorite } = this.props;
+    
+
     return (
       <section style={styles.container}>
-        {!filterBy && channels.map((item) => <ChannelItem channel={item} />)}
-        {filterBy &&
+        {filterByFavorite &&
           channels
-            .filter((item) => item.tipo === filterBy)
-            .map((item) => <ChannelItem channel={item} key={item.id}/>)}
+            .filter((item) => item.isFavorite === filterByFavorite)
+            .map((item) => {
+              console.log('entro en este');
+              return <ChannelItem channel={item} key={item.id} updateParentState={this.updateParentState}/>
+            })}
+
+        {!filterBy && !filterByFavorite && channels.map((item) => <ChannelItem channel={item} key={item.id}  updateParentState={this.updateParentState}/>)}
+
+        {filterBy && !filterByFavorite &&
+          channels
+          .filter((item) => {
+            return item.tipo.includes(filterBy)
+          }).map((item) => <ChannelItem channel={item} key={item.id}  updateParentState={this.updateParentState}/>)}
       </section>
     );
   }

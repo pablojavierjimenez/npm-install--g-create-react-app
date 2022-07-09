@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Favorite from "../Favorite/Favorite";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 const imagesFolder = require.context("../../assets/img/", true);
 export default class ChannelItem extends Component {
@@ -33,23 +33,40 @@ export default class ChannelItem extends Component {
       textTransform: "capitalize",
       fontSize: "12px",
       borderRadius: "4px",
-      visibility:"visible",
+      visibility: "visible",
     },
     logo: {
       width: "200px",
       height: "200px",
-      borderRadius: "30px"
+      borderRadius: "30px",
     },
   };
   render() {
-    const { channel } = this.props;
-    // console.log(channel.title);
-    this.styles.infoButton.visibility = (channel.info !== "") ? "visible" : "hidden";
+    let { channel, updateParentState } = this.props;
+    let favorites = JSON.parse(localStorage.getItem("FavoritesChannels"));
+
+    favorites.forEach((item) => {
+      // channel.filter((chItem) => {
+        if (channel.id === item.id) {
+          channel.isFavorite = item.isFavorite;
+        } else {
+          channel.isFavorite = false
+        }
+      // });
+    });
+
+
+    this.styles.infoButton.visibility =
+      channel.info !== "" ? "visible" : "hidden";
 
     const itemClassName = `ChannelItem ${channel.costo}`;
 
     return (
-      <div className={itemClassName} style={this.styles.ChannelItem}>
+      <div
+        className={itemClassName}
+        style={this.styles.ChannelItem}
+        tabIndex={channel.id + 8}
+      >
         <div className="ChannelItem__info">
           <h4>{channel.title}</h4>
         </div>
@@ -77,7 +94,10 @@ export default class ChannelItem extends Component {
               <p>{channel.description}</p>
             </details>
           )}
-          <Favorite channel={channel} />
+          <FavoriteButton
+            channel={channel}
+            updateParentState={updateParentState}
+          />
         </small>
       </div>
     );

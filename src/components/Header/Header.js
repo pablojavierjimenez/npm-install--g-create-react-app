@@ -8,6 +8,7 @@ const styles = {
   container:{
     position: "fixed",
     width: "100vw",
+    zIndex: "1000"
   },
   header: {
     backgroundColor: "#16356e",
@@ -31,7 +32,8 @@ const styles = {
   nav: {
     borderBottom: "solid 1px",
     paddingBottom: "1rem 0",
-    display: "flex",
+    display: "grid",
+    gridTemplateColumns: "repeat(7, 1fr)",
     justifyContent: "space-between",
     position: "fixed",
   },
@@ -49,17 +51,19 @@ const styles = {
 export default class Header extends Component {
   render() {
     return (
-    <div style={styles.container}>
+    <div style={styles.container} tabIndex="1">
       <div className="Header" style={styles.header}>
         <img src="./logox128.png" style={styles.logo} aria-label="emoji" />
         <span style={styles.brand}>Streamming List</span>
       </div>
       <nav className="nav-link" style={styles.nav}>
-        <NavLink to="/">Todo</NavLink>
-        <NavLink to="/subcription">Subscripcion</NavLink>
-        <NavLink to="/favoritos">❤️</NavLink>
-        <NavLink to="/mixed">Mixto</NavLink>
-        <NavLink to="/free">Gratis</NavLink>
+        <NavLink tabIndex="2" to="/">Todo</NavLink>
+        <NavLink tabIndex="3" to="/subcription">Subscripcion</NavLink>
+        <NavLink tabIndex="4" to="/mixed">Mixto</NavLink>
+        <NavLink tabIndex="5" to="/favoritos">❤️</NavLink>
+        <NavLink tabIndex="6" to="/in-spanish">En Español</NavLink>
+        <NavLink tabIndex="7" to="/free">Gratis</NavLink>
+        <NavLink tabIndex="8" to="/argentinos">Argentinos</NavLink>
       </nav>
     </div>
     );

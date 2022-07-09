@@ -10,19 +10,21 @@ import Subscription from "./components/Subscription";
 import MixedChannel from "./components/MixedChannel";
 import FreeChannels from "./components/FreeChannels";
 import Favorites from "./components/Favorites";
+import InSpanish from "./components/InSpanish";
+import Argentinos from "./components/Argentinos";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-let channelListFromStorage = [];
+// let channelListFromStorage = [];
 
-if (
-  localStorage.getItem("channelList") &&
-  JSON.parse(localStorage.getItem("channelList")).length > 0
-) {
-  console.log("ya existe");
-} else {
+// if (
+//   localStorage.getItem("channelList") &&
+//   JSON.parse(localStorage.getItem("channelList")).length > 0
+// ) {
+//   console.log("ya existe");
+// } else {
   console.log("no existe se agrega");
   localStorage.setItem("channelList", JSON.stringify(channelList));
-}
+// }
 
 const haveIPreexistingFavorites =
   localStorage.getItem("FavoritesChannels") &&
@@ -37,10 +39,12 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="subcription" element={<Subscription />} />
-      <Route path="mixed" element={<MixedChannel />} />
-      <Route path="free" element={<FreeChannels />} />
-      <Route path="favoritos" element={<Favorites />} />
+      <Route path="subcription" element={<Subscription filterBy="subscripcion"/>} />
+      <Route path="mixed" element={<MixedChannel  filterBy="mixto"/>} />
+      <Route path="favoritos" element={<Favorites filterBy="favorito"/>} />
+      <Route path="free" element={<FreeChannels  filterBy="gratis"/>} />
+      <Route path="in-spanish" element={<InSpanish filterBy="in-spanish" />} />
+      <Route path="argentinos" element={<Argentinos filterBy="argentino"/>} />
     </Routes>
   </BrowserRouter>
 );

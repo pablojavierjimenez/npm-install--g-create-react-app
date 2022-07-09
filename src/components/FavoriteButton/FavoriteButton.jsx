@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Favorite.css";
+import "./FavoriteButton.css";
 import channelList from "../../db/channels";
 const styles = {
   container: {
@@ -13,7 +13,7 @@ const styles = {
     backgroundColor: "#673ab76b",
   },
 };
-export default class Favorite extends Component {
+export default class FavoriteButton extends Component {
   favorites = JSON.parse(localStorage.getItem("FavoritesChannels")) || [];
   state = {};
 
@@ -30,6 +30,7 @@ export default class Favorite extends Component {
       .isFavorite
       ? "❤️"
       : "🤍";
+
     this.setState({
       heart: newHeart,
     });
@@ -44,10 +45,15 @@ export default class Favorite extends Component {
   };
 
   _removeChannelFromFavorites = (channel) => {
+    let { updateParentState } = this.props;
     channel.isFavorite = false;
-    this.favorites = this.favorites.filter((item) => item.id !== channel.id);
+    let updatedFavorites = this.favorites.filter(
+      (item) => item.id !== channel.id
+    );
     this._setIsFavoriteOnChannelList(channel);
-    localStorage.setItem("FavoritesChannels", JSON.stringify(this.favorites));
+    // console.log(updatedFavorites);
+    localStorage.setItem("FavoritesChannels", JSON.stringify(updatedFavorites));
+    updateParentState(updatedFavorites);
   };
 
   _setIsFavoriteOnChannelList = (channel) => {
