@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #7dbbd9;
 }
 
 .App-logo {
@@ -28,11 +29,53 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h4 {
+  line-height: 12px;
+  margin: 0 0 16px 0;
+}
+
+.nav-link a {
+  display: block;
+    box-sizing: border-box;
+    width: calc(100vw / 7);
+    text-decoration: none;
+    padding: 4px;
+    background-color: #1f1933;
+    color: white;
+    vertical-align: middle;
+}
+
+.nav-link a:hover {
+  background-color: #f7f7f7;
+  color: #000000;
+}
+
+.nav-link a.active {
+  font-weight: bolder;
+  text-shadow: #1f1933 0px 0px 7px;
+  background-color: #f7f7f7;
+  color: #000000;
+  font-weight: 500;
+}
+
+.ChannelItem:hover,
+.ChannelItem:focus {
+  background-color: #1f1933 !important;
+  color: white;
+  transform: scale(1.2);
+  z-index: inherit;
+}
+.ChannelItem:focus {
+  border: none;
+}
+.ChannelItem:hover, .ChannelItem__info {
+  font-size: 1.3rem;
+  line-height: 1rem;
+}
+.ChannelItem__preview  {
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+.ChannelItem:hover, .ChannelItem__preview img {
+  box-shadow: 0 0 3px #ffffff;
 }
