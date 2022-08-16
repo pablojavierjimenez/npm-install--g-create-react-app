@@ -44,9 +44,9 @@ root.render(
       <Route path="music" element={<FilteredList  filterBy="musica"/>} />
       {/* <Route path="music" element={<FilteredList  filterBy="musica"/>} /> */}
       <Route path="favoritos" element={<Favorites filterBy="favorito"/>} />
-      <Route path="free" element={<FreeChannels  filterBy="gratis"/>} />
-      <Route path="in-spanish" element={<InSpanish filterBy="in-spanish" />} />
-      <Route path="argentinos" element={<Argentinos filterBy="argentino"/>} />
+      <Route path="free" element={<FilteredList   filterBy="gratis"/>} />
+      <Route path="in-spanish" element={<FilteredList  filterBy="in-spanish" />} />
+      <Route path="argentinos" element={<FilteredList  filterBy="argentino"/>} />
     </Routes>
   </BrowserRouter>
 );
