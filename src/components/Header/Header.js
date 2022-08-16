@@ -32,10 +32,11 @@ const styles = {
   nav: {
     borderBottom: "solid 1px",
     paddingBottom: "1rem 0",
-    display: "grid",
+    display: "FLEX",
     gridTemplateColumns: "repeat(7, 1fr)",
     justifyContent: "space-between",
     position: "fixed",
+    width: "100%"
   },
   link: {
     display: "block",
@@ -59,7 +60,7 @@ export default class Header extends Component {
       <nav className="nav-link" style={styles.nav}>
         <NavLink tabIndex="2" to="/">Todo</NavLink>
         <NavLink tabIndex="3" to="/subcription">Subscripcion</NavLink>
-        <NavLink tabIndex="4" to="/mixed">Mixto</NavLink>
+        <NavLink tabIndex="4" to="/music">Musica</NavLink>
         <NavLink tabIndex="5" to="/favoritos">❤️</NavLink>
         <NavLink tabIndex="6" to="/in-spanish">En Español</NavLink>
         <NavLink tabIndex="7" to="/free">Gratis</NavLink>

@@ -55,9 +55,11 @@ export default class ChannelItem extends Component {
     //   // });
     // });
 
-
-    this.styles.infoButton.visibility =
-      channel.info !== "" ? "visible" : "hidden";
+    /**
+     * TODO: arreglar el boton de info aca, y luego descomentar la linea 85 a 92
+     */
+    // this.styles.infoButton.visibility =
+    //   channel.info !== "" ? "visible" : "hidden";
 
     const itemClassName = `ChannelItem ${channel.costo}`;
 
@@ -80,14 +82,14 @@ export default class ChannelItem extends Component {
           </a>
         </div>
         <small style={this.styles.info}>
-          <a
+          {/* <a
             href={channel.info}
             rel="noreferrer"
             style={this.styles.infoButton}
             target="_blank"
           >
             noticias
-          </a>
+          </a> */}
           {channel.description !== "" && (
             <details>
               <summary>detalles</summary>

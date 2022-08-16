@@ -12,6 +12,7 @@ import FreeChannels from "./components/FreeChannels";
 import Favorites from "./components/Favorites";
 import InSpanish from "./components/InSpanish";
 import Argentinos from "./components/Argentinos";
+import FilteredList from "./components/FilteredList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // let channelListFromStorage = [];
@@ -39,8 +40,9 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="subcription" element={<Subscription filterBy="subscripcion"/>} />
-      <Route path="mixed" element={<MixedChannel  filterBy="mixto"/>} />
+      <Route path="subcription" element={<FilteredList filterBy="subscripcion"/>} />
+      <Route path="music" element={<FilteredList  filterBy="musica"/>} />
+      {/* <Route path="music" element={<FilteredList  filterBy="musica"/>} /> */}
       <Route path="favoritos" element={<Favorites filterBy="favorito"/>} />
       <Route path="free" element={<FreeChannels  filterBy="gratis"/>} />
       <Route path="in-spanish" element={<InSpanish filterBy="in-spanish" />} />

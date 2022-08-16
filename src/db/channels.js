@@ -205,7 +205,7 @@ const channelList = [
     info: "https://www.youtube.com/c/CrunchyrollenEspa%C3%B1ol/videos",
     logo: "./crunchyroll.png",
     costo: "gratis o subscripcion",
-    tipo: ["mixto"],
+    tipo: ["subscripcion"],
     isFavorite: false
   },
   {
@@ -282,7 +282,7 @@ const channelList = [
     info: "",
     logo: "./spotify.png",
     costo: "gratis o subscripcion",
-    tipo: ["mixto", "musica"],
+    tipo: ["subscripcion", "musica"],
     isFavorite: false
   },
   {
@@ -293,7 +293,7 @@ const channelList = [
     info: "",
     logo: "./youtube-music.png",
     costo: "gratis o subscripcion",
-    tipo: ["mixto", "musica"],
+    tipo: ["subscripcion", "musica"],
     isFavorite: false
   },
   {
@@ -436,7 +436,7 @@ const channelList = [
     info: "Ahorra y aprende a lo grande",
     logo: "./Udemy.webp",
     costo: "subscripcion",
-    tipo: ["mixto"],
+    tipo: ["subscripcion"],
     isFavorite: false
   },
  
@@ -567,7 +567,7 @@ const channelList = [
     description: "",
     url: "https://www.elnueve.com.ar/en-vivo",
     info: "",
-    logo: "./elnueve-bsas.png",
+    logo: "./elnueve-bsas-ar.png",
     costo: "gratis",
     tipo: ["in-spanish", "argentino", "gratis"],
     isFavorite: false
