@@ -58,8 +58,7 @@ h4 {
   font-weight: 500;
 }
 
-.ChannelItem:hover,
-.ChannelItem:focus {
+.ChannelItem:hover {
   background-color: #1f1933 !important;
   color: white;
   transform: scale(1.2);

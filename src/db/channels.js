@@ -177,6 +177,17 @@ const channelList = [
   },
   {
     id: 17,
+    title: "Cuevana (3)",
+    description: "",
+    url: "https://ww1.cuevana3.me/",
+    info: "",
+    logo: "./cuevana-3.png",
+    costo: "gratis",
+    tipo: ["gratis"],
+    isFavorite: false
+  },
+  {
+    id: 17,
     title: "pelisplus (estrenos)",
     description: "",
     url: "https://pelisplus.io/peliculas/estreno/",
@@ -331,17 +342,39 @@ const channelList = [
   },
   {
     id: 31,
+    title: "Depor TV",
+    description: "",
+    url: "https://www.youtube.com/watch?v=qlFNH-SDWTI&ab_channel=DEPORTV",
+    info: "",
+    logo: "./deportv.jpg",
+    costo: "gratis",
+    tipo: ["in-spanish", "argentino", "gratis", "deporte", "youtube"],
+    isFavorite: false
+  },
+  {
+    id: 32,
     title: "Red Bull TV",
     description: "",
     url: "https://www.redbull.com/ar-es/discover",
     info: "",
     logo: "./redbull-tv.png",
     costo: "gratis",
-    tipo: ["gratis"],
+    tipo: ["gratis", "deporte", "youtube"],
     isFavorite: false
   },
   {
-    id: 32,
+    id: 33,
+    title: "FMS TV",
+    description: "",
+    url: "https://www.youtube.com/watch?v=ucdKJbiBbfU&ab_channel=URTV",
+    info: "",
+    logo: "./FMS-24hs.jpg",
+    costo: "gratis",
+    tipo: ["in-spanish", "gratis", "deporte", "youtube"],
+    isFavorite: false
+  },
+  {
+    id: 34,
     title: "Blim TV",
     description: "",
     url: "https://www.blim.com/",
@@ -352,7 +385,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 33,
+    id: 35,
     title: "Plex Tv (en ingles)",
     description: "",
     url: "https://watch.plex.tv/movies-and-shows",
@@ -363,7 +396,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 34,
+    id: 36,
     title: "Qubit Tv",
     description: "",
     url: "https://www.qubit.tv/inicio/",
@@ -374,7 +407,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 35,
+    id: 37,
     title: "DirecTV GO",
     description: "",
     url: "https://www.directvgo.com/home/watch",
@@ -385,7 +418,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 36,
+    id: 38,
     title: "Teatrix",
     description: "",
     url: "https://teatrix.com/",
@@ -396,7 +429,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 37,
+    id: 39,
     title: "Udemy",
     description: "",
     url: "https://www.udemy.com/",
@@ -408,7 +441,7 @@ const channelList = [
   },
  
   {
-    id: 38,
+    id: 40,
     title: "TV Publica",
     description: "",
     url: "https://www.youtube.com/watch?v=n3_wuXh6jHY&ab_channel=Televisi%C3%B3nP%C3%BAblica",
@@ -419,7 +452,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 39,
+    id: 41,
     title: "Paka Paka",
     description: "",
     url: "https://www.youtube.com/watch?v=GvKCnBC80Gc&ab_channel=Pakapaka",
@@ -430,7 +463,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 40,
+    id: 42,
     title: "Canal Encuentro",
     description: "",
     url: "https://www.youtube.com/watch?v=o6-PQf5PHiM&ab_channel=CanalEncuentro",
@@ -441,7 +474,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 41,
+    id: 43,
     title: "DW - Documental",
     description: "",
     url: "https://www.youtube.com/c/DWDocumental/videos",
@@ -452,18 +485,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 42,
-    title: "Depor TV",
-    description: "",
-    url: "https://www.youtube.com/watch?v=qlFNH-SDWTI&ab_channel=DEPORTV",
-    info: "",
-    logo: "./deportv.jpg",
-    costo: "gratis",
-    tipo: ["in-spanish", "argentino", "gratis", "deporte", "youtube"],
-    isFavorite: false
-  },
-  {
-    id: 43,
+    id: 44,
     title: "Cronica TV",
     description: "",
     url: "https://www.youtube.com/watch?v=InSydaLSSlw&ab_channel=Cr%C3%B3nicaTV",
@@ -474,7 +496,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 44,
+    id: 45,
     title: "TN en vivo",
     description: "",
     url: "https://www.youtube.com/watch?v=wHn1_QVoXGM&ab_channel=TodoNoticias",
@@ -485,7 +507,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 45,
+    id: 46,
     title: "C5N",
     description: "",
     url: "https://www.youtube.com/watch?v=wGdLaO6Mx6A&ab_channel=C5N",
@@ -496,7 +518,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 46,
+    id: 47,
     title: "La Nacion+",
     description: "",
     url: "https://www.youtube.com/watch?v=HYxWurJ3ejE&ab_channel=LANACION",
@@ -507,7 +529,7 @@ const channelList = [
     isFavorite: false
   },
   {
-    id: 47,
+    id: 48,
     title: "Canal 26",
     description: "",
     url: "https://www.youtube.com/watch?v=BwEO5hrk_oo&ab_channel=Canal26",
@@ -515,6 +537,39 @@ const channelList = [
     logo: "./canal-26.jpg",
     costo: "gratis",
     tipo: ["in-spanish", "argentino", "gratis", "youtube"],
+    isFavorite: false
+  },
+  {
+    id: 49,
+    title: "TV ARG HD",
+    description: "",
+    url: "https://www.tvarghd.com/",
+    info: "",
+    logo: "./argentina-tv-hd.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "argentino", "gratis", "youtube"],
+    isFavorite: false
+  },
+  {
+    id: 50,
+    title: "Mi TE-LE-FE",
+    description: "",
+    url: "https://mitelefe.com/vivo/",
+    info: "",
+    logo: "./mi-telefe.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "argentino", "gratis"],
+    isFavorite: false
+  },
+  {
+    id: 51,
+    title: "Canal 9 BsAs",
+    description: "",
+    url: "https://www.elnueve.com.ar/en-vivo",
+    info: "",
+    logo: "./elnueve-bsas.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "argentino", "gratis"],
     isFavorite: false
   },
   {
