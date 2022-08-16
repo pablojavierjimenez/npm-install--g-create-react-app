@@ -8,7 +8,7 @@ class Favorites extends Component {
   };
 
   render() {
-    const channelList = JSON.parse(localStorage.getItem("FavoritesChannels"));
+    const channelList = JSON.parse(localStorage.getItem("channelList"));
     return (
       <main className="App">
         <Header />

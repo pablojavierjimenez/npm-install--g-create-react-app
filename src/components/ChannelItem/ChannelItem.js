@@ -45,15 +45,15 @@ export default class ChannelItem extends Component {
     let { channel, updateParentState } = this.props;
     let favorites = JSON.parse(localStorage.getItem("FavoritesChannels"));
 
-    favorites.forEach((item) => {
-      // channel.filter((chItem) => {
-        if (channel.id === item.id) {
-          channel.isFavorite = item.isFavorite;
-        } else {
-          channel.isFavorite = false
-        }
-      // });
-    });
+    // favorites.forEach((item) => {
+    //   // channel.filter((chItem) => {
+    //     if (channel.id === item.id) {
+    //       channel.isFavorite = item.isFavorite;
+    //     } else {
+    //       channel.isFavorite = false
+    //     }
+    //   // });
+    // });
 
 
     this.styles.infoButton.visibility =
