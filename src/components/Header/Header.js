@@ -60,11 +60,14 @@ export default class Header extends Component {
       <nav className="nav-link" style={styles.nav}>
         <NavLink tabIndex="2" to="/">Todo</NavLink>
         <NavLink tabIndex="3" to="/subcription">Subscripcion</NavLink>
-        <NavLink tabIndex="4" to="/music">Musica</NavLink>
-        <NavLink tabIndex="5" to="/favoritos">❤️</NavLink>
-        <NavLink tabIndex="6" to="/in-spanish">En Español</NavLink>
         <NavLink tabIndex="7" to="/free">Gratis</NavLink>
         <NavLink tabIndex="8" to="/argentinos">Argentinos</NavLink>
+
+        <NavLink tabIndex="5" to="/favoritos">❤️</NavLink>
+        
+        <NavLink tabIndex="4" to="/music">Musica</NavLink>
+        <NavLink tabIndex="4" to="/animacion">Animacion</NavLink>
+        <NavLink tabIndex="6" to="/in-spanish">En Español</NavLink>
       </nav>
     </div>
     );

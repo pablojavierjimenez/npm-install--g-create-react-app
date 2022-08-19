@@ -12,7 +12,7 @@ class FilteredList extends Component {
     return (
       <main className="App">
         <Header />
-        <ItemList channels={channelListFromStorage} filterBy={filterBy}/>
+        <ItemList channels={channelListFromStorage} filterBy={filterBy} sortItems={true}/>
       </main>
     );
   }

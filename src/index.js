@@ -6,26 +6,25 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import channelList from "./db/channels";
 import App from "./App";
-import Subscription from "./components/Subscription";
-import MixedChannel from "./components/MixedChannel";
-import FreeChannels from "./components/FreeChannels";
 import Favorites from "./components/Favorites";
-import InSpanish from "./components/InSpanish";
-import Argentinos from "./components/Argentinos";
 import FilteredList from "./components/FilteredList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // let channelListFromStorage = [];
+let actualWebVersion = 1;
+let actualWebVersionFromStorage = JSON.parse(localStorage.getItem("actualWebVersion"));
 
-// if (
-//   localStorage.getItem("channelList") &&
-//   JSON.parse(localStorage.getItem("channelList")).length > 0
-// ) {
-//   console.log("ya existe");
-// } else {
+if (actualWebVersion === actualWebVersionFromStorage) {
+  console.log('no hay una nueva version');
+} else {
+  console.log('hay una version nueva limpio la lista vieja y pongo la nueva');
   console.log("no existe se agrega");
+  channelList.forEach( (item, index) => item.id = index +1);
   localStorage.setItem("channelList", JSON.stringify(channelList));
-// }
+  localStorage.setItem("actualWebVersion", JSON.stringify(actualWebVersion));
+}
+
+
 
 const haveIPreexistingFavorites =
   localStorage.getItem("FavoritesChannels") &&
@@ -41,12 +40,13 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="subcription" element={<FilteredList filterBy="subscripcion"/>} />
-      <Route path="music" element={<FilteredList  filterBy="musica"/>} />
-      {/* <Route path="music" element={<FilteredList  filterBy="musica"/>} /> */}
-      <Route path="favoritos" element={<Favorites filterBy="favorito"/>} />
       <Route path="free" element={<FilteredList   filterBy="gratis"/>} />
-      <Route path="in-spanish" element={<FilteredList  filterBy="in-spanish" />} />
       <Route path="argentinos" element={<FilteredList  filterBy="argentino"/>} />
+
+      <Route path="favoritos" element={<Favorites filterBy="favorito"/>} />
+      <Route path="music" element={<FilteredList  filterBy="musica"/>} />
+      <Route path="animacion" element={<FilteredList  filterBy="animacion"/>} />      
+      <Route path="in-spanish" element={<FilteredList  filterBy="in-spanish" />} />
     </Routes>
   </BrowserRouter>
 );
