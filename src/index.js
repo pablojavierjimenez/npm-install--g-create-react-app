@@ -10,8 +10,8 @@ import Favorites from "./components/Favorites";
 import FilteredList from "./components/FilteredList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// let channelListFromStorage = [];
-let actualWebVersion = 1;
+
+let actualWebVersion = 3; // Math.floor(Math.random() * 10000);
 let actualWebVersionFromStorage = JSON.parse(localStorage.getItem("actualWebVersion"));
 
 if (actualWebVersion === actualWebVersionFromStorage) {
@@ -40,13 +40,15 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="subcription" element={<FilteredList filterBy="subscripcion"/>} />
-      <Route path="free" element={<FilteredList   filterBy="gratis"/>} />
+      <Route path="gratis" element={<FilteredList   filterBy="gratis"/>} />
       <Route path="argentinos" element={<FilteredList  filterBy="argentino"/>} />
 
       <Route path="favoritos" element={<Favorites filterBy="favorito"/>} />
-      <Route path="music" element={<FilteredList  filterBy="musica"/>} />
+      <Route path="musica" element={<FilteredList  filterBy="musica"/>} />
       <Route path="animacion" element={<FilteredList  filterBy="animacion"/>} />      
-      <Route path="in-spanish" element={<FilteredList  filterBy="in-spanish" />} />
+      <Route path="en-espaniol" element={<FilteredList  filterBy="in-spanish" />} />
+      <Route path="deporte" element={<FilteredList  filterBy="deporte" />} />
+      <Route path="tv-en-vivo" element={<FilteredList  filterBy="tv-en-vivo" />} />
     </Routes>
   </BrowserRouter>
 );

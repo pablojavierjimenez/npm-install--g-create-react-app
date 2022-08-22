@@ -77,6 +77,17 @@ const channelList = [
     isFavorite: false
   },
   {
+    rating: 5,
+    title: "AppleTv+",
+    description: "",
+    url: "https://tv.apple.com/",
+    info: "https://www.youtube.com/c/TopCinema/search?query=paramount%20plus",
+    logo: "./apple-tv.png",
+    costo: "subscripcion",
+    tipo: ["subscripcion"],
+    isFavorite: false
+  },
+  {
     rating: 3,
     title: "Spotify",
     description: "",
@@ -106,7 +117,7 @@ const channelList = [
     info: "",
     logo: "./mi-telefe.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
+    tipo: ["in-spanish", "argentino", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -117,7 +128,7 @@ const channelList = [
     info: "",
     logo: "./elnueve-bsas-ar.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
+    tipo: ["in-spanish", "argentino", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -128,7 +139,7 @@ const channelList = [
     info: "",
     logo: "./america-tv.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
+    tipo: ["in-spanish", "argentino", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -161,7 +172,7 @@ const channelList = [
     info: "",
     logo: "./cont.ar.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
+    tipo: ["in-spanish", "argentino", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -326,7 +337,7 @@ const channelList = [
     info: "",
     logo: "./Disney-channel.png",
     costo: "gratis",
-    tipo: ["animacion"],
+    tipo: ["animacion", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -337,7 +348,7 @@ const channelList = [
     info: "",
     logo: "./cartoon-network.png",
     costo: "gratis",
-    tipo: ["animacion"],
+    tipo: ["animacion", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -348,7 +359,7 @@ const channelList = [
     info: "",
     logo: "./boomerang.png",
     costo: "gratis",
-    tipo: ["animacion"],
+    tipo: ["animacion", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -359,7 +370,7 @@ const channelList = [
     info: "",
     logo: "./nikelodeon.png",
     costo: "gratis",
-    tipo: ["animacion"],
+    tipo: ["animacion", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -554,7 +565,7 @@ const channelList = [
     rating: 5,
     title: "TV Publica",
     description: "",
-    url: "https://www.cont.ar/live",
+    url: "https://www.youtube.com/user/TVPublicaArgentina",
     info: "",
     logo: "./TV-Publica.png",
     costo: "gratis",
@@ -602,7 +613,7 @@ const channelList = [
     info: "",
     logo: "./cronica-tv.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino", "youtube"],
+    tipo: ["in-spanish", "argentino", "youtube", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -613,7 +624,7 @@ const channelList = [
     info: "",
     logo: "./TN-vivo.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
+    tipo: ["in-spanish", "argentino", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -624,7 +635,7 @@ const channelList = [
     info: "",
     logo: "./c5n.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino", "youtube"],
+    tipo: ["in-spanish", "argentino", "youtube", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -635,7 +646,7 @@ const channelList = [
     info: "",
     logo: "./la-nacion.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino", "youtube"],
+    tipo: ["in-spanish", "argentino", "youtube", "tv-en-vivo"],
     isFavorite: false
   },
   {
@@ -646,47 +657,126 @@ const channelList = [
     info: "",
     logo: "./canal-26.jpg",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino", "youtube"],
+    tipo: ["in-spanish", "argentino", "youtube", "tv-en-vivo"],
     isFavorite: false
   },
+
   {
-    rating: 0,
-    title: "canal 8 MDP",
+    rating: 2,
+    title: "TYC Sport",
     description: "",
-    url: "https://mardelplata.telefe.com/vivo",
-    info: "https://mardelplata.mitelefe.com/horarios",
-    logo: "./canal8-mdq.png",
-    costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
-    isFavorite: false
-  },
-  {
-    rating: 0,
-    title: "Canal 10 MDP",
-    description: "",
-    url: "https://zencast.tv/player/canal10/",
-    info: "https://www.canal10mardelplata.tv/DiasyHorarios/",
-    logo: "./canal-10-mdq-2.jpg",
-    costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
-    isFavorite: false
-  },
-  {
-    rating: 0,
-    title: "Instagram",
-    description: "",
-    url: "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end",
+    url: "https://futbollibre.net/en-vivo/tyc-sports/",
     info: "",
-    logo: "./instagram.webp",
+    logo: "./TyC_Sports.webp",
     costo: "gratis",
-    tipo: ["app"],
+    tipo: ["in-spanish", "deporte", "tv-en-vivo"],
     isFavorite: false
   },
+  {
+    rating: 2,
+    title: "ESPN 2",
+    description: "",
+    url: "https://futbollibre.net/en-vivo/espn-2/",
+    info: "",
+    logo: "./espn.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "deporte", "tv-en-vivo"],
+    isFavorite: false
+  },
+  {
+    rating: 2,
+    title: "Fox Sports",
+    description: "",
+    url: "https://futbollibre.net/en-vivo/fox-sports-1/?gratis",
+    info: "",
+    logo: "./fox-sports.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "deporte", "tv-en-vivo"],
+    isFavorite: false
+  },
+  {
+    rating: 2,
+    title: "DirecTV Sports",
+    description: "",
+    url: "https://futbollibre.net/en-vivo/directv-sports/",
+    info: "",
+    logo: "./directv-sport.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "deporte", "tv-en-vivo"],
+    isFavorite: false
+  },
+  {
+    rating: 2,
+    title: "AXN (vivo)",
+    description: "",
+    url: "https://televisionlibre.net/canal/axn-en-vivo/",
+    info: "",
+    logo: "./axn-tv.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "gratis", "tv-en-vivo"],
+    isFavorite: false
+  },
+  {
+    rating: 2,
+    title: "Warner TV",
+    description: "",
+    url: "https://televisionlibre.net/canal/warner-channel-en-vivo/",
+    info: "",
+    logo: "./warner-channel.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "gratis", "tv-en-vivo"],
+    isFavorite: false
+  },
+  {
+    rating: 2,
+    title: "Universal TV",
+    description: "",
+    url: "https://televisionlibre.net/canal/universal-channel-en-vivo/",
+    info: "",
+    logo: "./universal-tv.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "gratis", "tv-en-vivo"],
+    isFavorite: false
+  },
+  {
+    rating: 2,
+    title: "Sony Channel",
+    description: "",
+    url: "https://televisionlibre.net/canal/sony-channel-en-vivo/",
+    info: "",
+    logo: "./sony-channel.webp",
+    costo: "gratis",
+    tipo: ["in-spanish", "gratis", "tv-en-vivo"],
+    isFavorite: false
+  },
+  // {
+  //   rating: 0,
+  //   title: "canal 8 MDP",
+  //   description: "",
+  //   url: "https://mardelplata.telefe.com/vivo",
+  //   info: "https://mardelplata.mitelefe.com/horarios",
+  //   logo: "./canal8-mdq.png",
+  //   costo: "gratis",
+  //   tipo: ["in-spanish", "argentino"],
+  //   isFavorite: false
+  // },
+  // {
+  //   rating: 0,
+  //   title: "Canal 10 MDP",
+  //   description: "",
+  //   url: "https://zencast.tv/player/canal10/",
+  //   info: "https://www.canal10mardelplata.tv/DiasyHorarios/",
+  //   logo: "./canal-10-mdq-2.jpg",
+  //   costo: "gratis",
+  //   tipo: ["in-spanish", "argentino"],
+  //   isFavorite: false
+  // },
   {
     rating: 0,
     title: "Whatsapp",
     description: "",
-    url: "whatsapp://send?text=YoYoYo",
+    // url: "whatsapp://send?text=YoYoYo",
+    url: "https://web.whatsapp.com/",
     info: "",
     logo: "./whatsApp.png",
     costo: "gratis",
@@ -695,11 +785,48 @@ const channelList = [
   },
   {
     rating: 0,
+    title: "Instagram",
+    description: "",
+    // url: "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end",
+    url: "https://instagram.com/",
+    info: "",
+    logo: "./instagram.webp",
+    costo: "gratis",
+    tipo: ["app"],
+    isFavorite: false
+  },
+  {
+    rating: 0,
+    title: "Tik-Tok",
+    description: "",
+    // url: "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end",
+    url: "https://www.tiktok.com/",
+    info: "",
+    logo: "./tik-tok.png",
+    costo: "gratis",
+    tipo: ["app"],
+    isFavorite: false
+  },
+  {
+    rating: 0,
     title: "Facebook",
     description: "",
-    url: "intent://facebook.com/#Intent;scheme=https;package=com.facebook.android;end",
+    // url: "intent://facebook.com/#Intent;scheme=https;package=com.facebook.android;end",
+    url: "https://facebook.com/",
     info: "",
     logo: "./facebook.webp",
+    costo: "gratis",
+    tipo: ["app"],
+    isFavorite: false
+  },
+  {
+    rating: 0,
+    title: "Twitter",
+    description: "",
+    // url: "intent://twitter.com/#Intent;scheme=https;package=com.twitter.android;end",
+    url: "https://twitter.com/",
+    info: "",
+    logo: "./twitter.jpg",
     costo: "gratis",
     tipo: ["app"],
     isFavorite: false
