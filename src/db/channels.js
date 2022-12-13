@@ -81,7 +81,7 @@ const channelList = [
     title: "AppleTv+",
     description: "",
     url: "https://tv.apple.com/",
-    info: "https://www.youtube.com/c/TopCinema/search?query=paramount%20plus",
+    info: "https://www.instagram.com/appletvplus/?hl=es",
     logo: "./apple-tv.png",
     costo: "subscripcion",
     tipo: ["subscripcion"],
@@ -103,10 +103,21 @@ const channelList = [
     title: "Crunchiroll",
     description: "",
     url: "https://www.crunchyroll.com/es/videos/anime",
-    info: "https://www.youtube.com/c/CrunchyrollenEspa%C3%B1ol/videos",
+    info: "https://www.youtube.com/playlist?list=PLm8koqOGgz6yAv7rXlfWpy1rtV_Y0LZgq",
     logo: "./crunchyroll.png",
     costo: "gratis o subscripcion",
     tipo: ["subscripcion", "animacion"],
+    isFavorite: false
+  },
+  {
+    rating: 0,
+    title: "canal 8 MDP",
+    description: "",
+    url: "https://canal8mardelplata.com.ar/en-vivo/",
+    info: "https://canal8mardelplata.com.ar/programacion/",
+    logo: "./canal8-mdq-2022.png",
+    costo: "gratis",
+    tipo: ["in-spanish", "argentino"],
     isFavorite: false
   },
   {
@@ -232,6 +243,17 @@ const channelList = [
   },
   {
     rating: 5,
+    title: "Octubre TV",
+    description: "",
+    url: "https://octubretv.com/",
+    info: "",
+    logo: "./OctubreTv.png",
+    costo: "gratis",
+    tipo: ["gratis", "in-spanish"],
+    isFavorite: false
+  },
+  {
+    rating: 5,
     title: "Cuevana (3)",
     description: "",
     url: "https://ww1.cuevana3.me/",
@@ -248,6 +270,17 @@ const channelList = [
     url: "https://pelisplus.io/peliculas/estreno/",
     info: "",
     logo: "./pelisplus-1.png",
+    costo: "gratis",
+    tipo: ["gratis"],
+    isFavorite: false
+  },
+  {
+    rating: 5,
+    title: "PELISFLIX",
+    description: "",
+    url: "https://pelisflix.org/",
+    info: "",
+    logo: "./pelis-flix.png",
     costo: "gratis",
     tipo: ["gratis"],
     isFavorite: false
@@ -292,6 +325,17 @@ const channelList = [
     url: "https://www3.animeflv.net/browse",
     info: "",
     logo: "./anime-flv-1.png",
+    costo: "gratis",
+    tipo: ["animacion"],
+    isFavorite: false
+  },
+  {
+    rating: 0,
+    title: "Veranime.org",
+    description: "",
+    url: "https://www.veranime.org/animes",
+    info: "",
+    logo: "./ver-anime_org.png",
     costo: "gratis",
     tipo: ["animacion"],
     isFavorite: false
@@ -753,9 +797,9 @@ const channelList = [
   //   rating: 0,
   //   title: "canal 8 MDP",
   //   description: "",
-  //   url: "https://mardelplata.telefe.com/vivo",
-  //   info: "https://mardelplata.mitelefe.com/horarios",
-  //   logo: "./canal8-mdq.png",
+  //   url: "https://canal8mardelplata.com.ar/en-vivo/",
+  //   info: "https://canal8mardelplata.com.ar/programacion/",
+  //   logo: "./canal8-mdq-2022.png",
   //   costo: "gratis",
   //   tipo: ["in-spanish", "argentino"],
   //   isFavorite: false
