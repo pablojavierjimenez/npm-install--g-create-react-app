@@ -110,14 +110,14 @@ const channelList = [
     isFavorite: false
   },
   {
-    rating: 0,
+    rating: 5,
     title: "canal 8 MDP",
     description: "",
     url: "https://canal8mardelplata.com.ar/en-vivo/",
     info: "https://canal8mardelplata.com.ar/programacion/",
     logo: "./canal8-mdq-2022.png",
     costo: "gratis",
-    tipo: ["in-spanish", "argentino"],
+    tipo: ["in-spanish", "argentino", "tv-en-vivo"],
     isFavorite: false
   },
   {
